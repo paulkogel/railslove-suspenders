@@ -3,7 +3,7 @@
 # Set up Rails app. Run this script immediately after cloning the codebase.
 # https://github.com/thoughtbot/guides/tree/master/protocol
 
-bundle install --binstubs=bin/stubs
+bundle install
 bundle exec rake db:setup
 
 if [ ! -f .env ]; then

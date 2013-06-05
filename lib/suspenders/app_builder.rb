@@ -68,25 +68,29 @@ module Suspenders
     end
 
     def create_partials_directory
-      empty_directory 'app/stylesheets/base'
-      empty_directory 'app/stylesheets/modules'
-      empty_directory 'app/stylesheets/layout'
-      empty_directory 'app/stylesheets/controllers'
+      empty_directory 'app/assets/stylesheets/base'
+      empty_directory 'app/assets/stylesheets/modules'
+      empty_directory 'app/assets/stylesheets/layout'
+      empty_directory 'app/assets/stylesheets/controllers'
     end
 
     def add_default_stylesheets
-      copy_file 'stylesheets/_shame.css.sass', 'app/stylesheets/_shame.css.sass'
-      Dir.glob('stylesheets/base/*.css.sass') do |base_file|
-        copy_file base_file, "app/stylesheets/base/#{base_file}"
-      end
+      copy_file 'stylesheets/application.css.sass', 'app/assets/stylesheets/application.css.sass'
+      copy_file 'stylesheets/_shame.css.sass', 'app/assets/stylesheets/_shame.css.sass'
+      copy_file 'stylesheets/base/_colors.css.sass', 'app/assets/stylesheets/base/_colors.css.sass'
+      copy_file 'stylesheets/base/_dimension.css.sass', 'app/assets/stylesheets/base/_dimensions.css.sass'
+      copy_file 'stylesheets/base/_element_defaults.css.sass', 'app/assets/stylesheets/base/_element_defaults.css.sass'
+      copy_file 'stylesheets/base/_icon_font.css.sass', 'app/assets/stylesheets/base/_icon_font.css.sass'
+      copy_file 'stylesheets/base/_sprites.css.sass', 'app/assets/stylesheets/base/_sprites.css.sass'
+      copy_file 'stylesheets/base/_typography.css.sass', 'app/assets/stylesheets/base/_typography.css.sass'
     end
 
     def create_shared_flashes
-      copy_file '_flashes.html.haml', 'app/views/layout/_flashes.html.haml'
+      copy_file '_flashes.html.haml', 'app/views/layouts/_flashes.html.haml'
     end
 
     def create_shared_javascripts
-      copy_file '_javascript.html.haml', 'app/views/layout/_javascript.html.haml'
+      copy_file '_javascript.html.haml', 'app/views/layouts/_javascript.html.haml'
     end
 
     def create_application_layout
@@ -226,11 +230,9 @@ module Suspenders
     end
 
     def setup_stylesheets
-      copy_file 'app/assets/stylesheets/application.css',
-        'app/assets/stylesheets/application.css.scss'
       remove_file 'app/assets/stylesheets/application.css'
-      concat_file 'import_scss_styles', 'app/assets/stylesheets/application.css.scss'
-      create_file 'app/assets/stylesheets/_screen.scss'
+      # concat_file 'import_scss_styles', 'app/assets/stylesheets/application.css.scss'
+      # create_file 'app/assets/stylesheets/_screen.scss'
     end
 
     def gitignore_files
@@ -238,7 +240,6 @@ module Suspenders
       [
         'app/models',
         'app/assets/images',
-        'app/views/pages',
         'db/migrate',
         'log',
         'spec/support',

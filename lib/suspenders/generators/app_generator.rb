@@ -50,7 +50,7 @@ module Suspenders
     def customize_gemfile
       build :replace_gemfile
       build :set_ruby_to_version_being_used
-      bundle_command 'install --binstubs=bin/stubs'
+      bundle_command 'install'
     end
 
     def setup_database
@@ -66,7 +66,7 @@ module Suspenders
     def setup_development_environment
       say 'Setting up the development environment'
       build :raise_on_delivery_errors
-      build :raise_on_unpermitted_parameters
+      # build :raise_on_unpermitted_parameters
       build :provide_setup_script
     end
 
@@ -76,10 +76,10 @@ module Suspenders
       build :test_factories_first
       build :generate_rspec
       build :configure_rspec
-      build :configure_background_jobs_for_rspec
+      # build :configure_background_jobs_for_rspec
       build :enable_database_cleaner
       build :configure_capybara_webkit
-      build :setup_guard_spork
+      # build :setup_guard_spork
     end
 
     def setup_production_environment
@@ -96,6 +96,7 @@ module Suspenders
     def create_suspenders_views
       say 'Creating suspenders views'
       build :create_partials_directory
+      say 'Add default stylesheets'
       build :add_default_stylesheets
       build :create_shared_flashes
       build :create_shared_javascripts
