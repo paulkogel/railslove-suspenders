@@ -1,15 +1,13 @@
 # Suspenders [![Build Status](https://secure.travis-ci.org/thoughtbot/suspenders.png?branch=master)](http://travis-ci.org/thoughtbot/suspenders)
 
-Suspenders is the base Rails application used at [thoughtbot](http://thoughtbot.com/community).
-
-  ![Suspenders boy](http://media.tumblr.com/1TEAMALpseh5xzf0Jt6bcwSMo1_400.png)
+Suspenders is the base Rails application used at [railslove](http://railslove.com) originally developed at [thoughtbot](http://thoughtbot.com/community).
 
 Installation
 ------------
 
 First install the suspenders gem:
 
-    gem install suspenders
+    gem install railslove-suspenders
 
 Then run:
 
@@ -28,8 +26,6 @@ which will be appended to the default generated projectname/Gemfile.
 It includes application gems like:
 
 * [Airbrake](https://github.com/airbrake/airbrake) for exception notification
-* [Bourbon](https://github.com/thoughtbot/bourbon) for Sass mixins
-* [Simple Form](https://github.com/plataformatec/simple_form) for form markup and style
 
 And testing gems like:
 
