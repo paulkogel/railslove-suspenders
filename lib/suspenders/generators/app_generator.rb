@@ -30,15 +30,15 @@ module Suspenders
       invoke :setup_staging_environment
       invoke :create_suspenders_views
       invoke :create_common_javascripts
-      invoke :add_jquery_ui
+      # invoke :add_jquery_ui
       invoke :configure_app
       invoke :setup_stylesheets
       invoke :copy_miscellaneous_files
       invoke :customize_error_pages
       invoke :remove_routes_comment_lines
       invoke :setup_git
-      invoke :create_heroku_apps
-      invoke :create_github_repo
+      # invoke :create_heroku_apps
+      # invoke :create_github_repo
       invoke :outro
     end
 
@@ -84,7 +84,7 @@ module Suspenders
 
     def setup_production_environment
       say 'Setting up the production environment'
-      build :configure_smtp
+      # build :configure_smtp
     end
 
     def setup_staging_environment
@@ -115,15 +115,15 @@ module Suspenders
       say 'Configuring app'
       build :configure_action_mailer
       build :blacklist_active_record_attributes
-      build :configure_strong_parameters
+      # build :configure_strong_parameters
       build :configure_time_zone
       build :configure_time_formats
       build :configure_rack_timeout
       build :disable_xml_params
       build :add_email_validator
       build :setup_default_rake_task
-      build :configure_unicorn
-      build :setup_foreman
+      # build :configure_unicorn
+      # build :setup_foreman
     end
 
     def setup_stylesheets
