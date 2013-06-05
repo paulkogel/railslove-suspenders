@@ -68,20 +68,30 @@ module Suspenders
     end
 
     def create_partials_directory
-      empty_directory 'app/views/application'
+      empty_directory 'app/stylesheets/base'
+      empty_directory 'app/stylesheets/modules'
+      empty_directory 'app/stylesheets/layout'
+      empty_directory 'app/stylesheets/controllers'
+    end
+
+    def add_default_stylesheets
+      copy_file 'stylesheets/_shame.css.sass', 'app/stylesheets/_shame.css.sass'
+      Dir.glob('stylesheets/base/*.css.sass') do |base_file|
+        copy_file base_file, "app/stylesheets/base/#{base_file}"
+      end
     end
 
     def create_shared_flashes
-      copy_file '_flashes.html.erb', 'app/views/application/_flashes.html.erb'
+      copy_file '_flashes.html.haml', 'app/views/layout/_flashes.html.haml'
     end
 
     def create_shared_javascripts
-      copy_file '_javascript.html.erb', 'app/views/application/_javascript.html.erb'
+      copy_file '_javascript.html.haml', 'app/views/layout/_javascript.html.haml'
     end
 
     def create_application_layout
-      template 'suspenders_layout.html.erb.erb',
-        'app/views/layouts/application.html.erb',
+      template 'suspenders_layout.html.haml',
+        'app/views/layouts/application.html.haml',
         :force => true
     end
 
