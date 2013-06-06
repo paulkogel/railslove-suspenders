@@ -1,3 +1,4 @@
 module RailsloveSuspenders
-  VERSION = '1.3.1'
+  VERSION = '0.1.0'
+  # suspenders 1.3.0
 end
