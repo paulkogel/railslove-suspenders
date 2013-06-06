@@ -24,7 +24,7 @@ rush to build something amazing; don't use it if you like missing deadlines.
   s.extra_rdoc_files = %w[README.md LICENSE]
   s.files = `git ls-files`.split("\n")
   s.homepage = 'http://github.com/railslove/railslove-suspenders'
-  s.name = 'suspenders'
+  s.name = 'railslove-suspenders'
   s.rdoc_options = ['--charset=UTF-8']
   s.require_paths = ['lib']
   s.summary = "Generate a Rails app using thoughtbot's best practices."
