@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '3.2.13'
   # s.add_development_dependency 'aruba', '~> 0.5'
   # s.add_development_dependency 'cucumber', '~> 1.2'
-  s.authors = ['thoughtbot']
+  s.authors = ['stephanpavlovic']
   s.date = Date.today.strftime('%Y-%m-%d')
 
   s.description = <<-HERE
@@ -19,7 +19,7 @@ thoughtbot to get a jump start on a working app. Use Suspenders if you're in a
 rush to build something amazing; don't use it if you like missing deadlines.
   HERE
 
-  s.email = 'support@thoughtbot.com'
+  s.email = 'stephan@railslove.com'
   s.executables = `git ls-files -- bin/*`.split("\n").map { |file| File.basename(file) }
   s.extra_rdoc_files = %w[README.md LICENSE]
   s.files = `git ls-files`.split("\n")
