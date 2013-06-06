@@ -1,4 +1,5 @@
-# Suspenders [![Build Status](https://secure.travis-ci.org/thoughtbot/suspenders.png?branch=master)](http://travis-ci.org/thoughtbot/suspenders)
+# Railslove Suspenders
+<!-- [![Build Status](https://secure.travis-ci.org/thoughtbot/suspenders.png?branch=master)](http://travis-ci.org/thoughtbot/suspenders) -->
 
 Suspenders is the base Rails application used at [railslove](http://railslove.com) originally developed at [thoughtbot](http://thoughtbot.com/community).
 
@@ -11,7 +12,7 @@ First install the suspenders gem:
 
 Then run:
 
-    suspenders projectname
+    railslove-suspenders projectname
 
 This will create a Rails 3.2 app in `projectname`. This script creates a
 new git repository. It is not meant to be used against an existing repo.
@@ -26,11 +27,12 @@ which will be appended to the default generated projectname/Gemfile.
 It includes application gems like:
 
 * [Airbrake](https://github.com/airbrake/airbrake) for exception notification
+* [Smurfville](https://github.com/railslove/smurfville) for dynamic color guide and more
+* [Compass](https://github.com/chriseppstein/compass) for css3 mixins
 
 And testing gems like:
 
-* [Bourne](https://github.com/thoughtbot/bourne) and
-  [Mocha](https://github.com/freerange/mocha) for stubbing and spying
+* [Mocha](https://github.com/freerange/mocha) for stubbing and spying
 * [Capybara](https://github.com/jnicklas/capybara) and
   [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit) for
   integration testing

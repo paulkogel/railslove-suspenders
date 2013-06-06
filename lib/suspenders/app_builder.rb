@@ -83,6 +83,8 @@ module Suspenders
       copy_file 'stylesheets/base/_icon_font.css.sass', 'app/assets/stylesheets/base/_icon_font.css.sass'
       copy_file 'stylesheets/base/_sprites.css.sass', 'app/assets/stylesheets/base/_sprites.css.sass'
       copy_file 'stylesheets/base/_typography.css.sass', 'app/assets/stylesheets/base/_typography.css.sass'
+      copy_file 'stylesheets/base/_global_mixins.css.sass', 'app/assets/stylesheets/base/_global_mixins.css.sass'
+
     end
 
     def create_shared_flashes
@@ -94,6 +96,7 @@ module Suspenders
     end
 
     def create_application_layout
+      remove_file 'app/views/layouts/application.html.erb'
       template 'suspenders_layout.html.haml',
         'app/views/layouts/application.html.haml',
         :force => true
