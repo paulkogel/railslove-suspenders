@@ -1,6 +1,6 @@
-module Suspenders
+module RailsloveSuspenders
   class AppBuilder < Rails::AppBuilder
-    include Suspenders::Actions
+    include RailsloveSuspenders::Actions
 
     def readme
       template 'README.md.erb', 'README.md'

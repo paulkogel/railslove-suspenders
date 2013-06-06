@@ -1,7 +1,7 @@
 require 'rails/generators'
 require 'rails/generators/rails/app/app_generator'
 
-module Suspenders
+module RailsloveSuspenders
   class AppGenerator < Rails::Generators::AppGenerator
     class_option :database, :type => :string, :aliases => '-d', :default => 'postgresql',
       :desc => "Preconfigure for selected database (options: #{DATABASES.join('/')})"
@@ -192,7 +192,7 @@ module Suspenders
     protected
 
     def get_builder_class
-      Suspenders::AppBuilder
+      RailsloveSuspenders::AppBuilder
     end
 
     def using_active_record?

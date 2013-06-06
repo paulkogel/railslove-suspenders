@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'suspenders/version'
+require 'railslove-suspenders/version'
 require 'date'
 
 Gem::Specification.new do |s|
@@ -23,11 +23,11 @@ rush to build something amazing; don't use it if you like missing deadlines.
   s.executables = `git ls-files -- bin/*`.split("\n").map { |file| File.basename(file) }
   s.extra_rdoc_files = %w[README.md LICENSE]
   s.files = `git ls-files`.split("\n")
-  s.homepage = 'http://github.com/thoughtbot/suspenders'
+  s.homepage = 'http://github.com/railslove/railslove-suspenders'
   s.name = 'suspenders'
   s.rdoc_options = ['--charset=UTF-8']
   s.require_paths = ['lib']
   s.summary = "Generate a Rails app using thoughtbot's best practices."
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.version = Suspenders::VERSION
+  s.version = RailsloveSuspenders::VERSION
 end
