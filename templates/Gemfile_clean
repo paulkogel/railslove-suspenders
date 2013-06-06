@@ -4,12 +4,10 @@ gem 'airbrake'
 gem 'compass'
 gem 'jquery-rails'
 gem 'pg'
-gem 'rack-timeout'
 gem 'rails', '>= 3.2.13'
 gem 'quiet_assets'
+gem 'newrelic_rpm'
 
-gem 'smurfville'
-gem 'i18n_viz'
 
 group :assets do
   gem 'coffee-rails'
@@ -21,6 +19,8 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'smurfville'
+  gem 'i18n_viz'
 end
 
 group :development, :test do
@@ -39,8 +39,4 @@ end
 group :deploy do
   gem "capistrano"
   gem "capistrano-ext"
-end
-
-group :staging, :production do
-  gem 'newrelic_rpm'
 end
