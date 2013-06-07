@@ -10,6 +10,8 @@ First install the suspenders gem:
 
     gem install railslove-suspenders
 
+Make sure that you have your local postgres running on port 5432
+
 Then run:
 
     railslove-suspenders projectname

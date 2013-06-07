@@ -20,7 +20,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'smurfville'
-  gem 'i18n_viz'
 end
 
 group :development, :test do
