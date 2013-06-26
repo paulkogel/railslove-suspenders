@@ -57,8 +57,8 @@ module RailsloveSuspenders
     def setup_staging_environment
       run 'cp config/environments/production.rb config/environments/staging.rb'
 
-      prepend_file 'config/environments/staging.rb',
-        "Mail.register_interceptor RecipientInterceptor.new(ENV['EMAIL_RECIPIENTS'])\n"
+      # prepend_file 'config/environments/staging.rb',
+      #  "Mail.register_interceptor RecipientInterceptor.new(ENV['EMAIL_RECIPIENTS'])\n"
     end
 
     def initialize_on_precompile
