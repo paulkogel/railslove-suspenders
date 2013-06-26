@@ -7,13 +7,12 @@ gem 'pg'
 gem 'rails', '>= 3.2.13'
 gem 'quiet_assets'
 gem 'newrelic_rpm'
-
+gem 'haml-rails'
 
 group :assets do
   gem 'coffee-rails'
   gem 'compass-rails'
   gem 'sass-rails'
-  gem 'haml-rails'
   gem 'uglifier'
 end
 
