@@ -130,7 +130,6 @@ module RailsloveSuspenders
     def configure_rspec
       remove_file '.rspec'
       copy_file 'rspec', '.rspec'
-      prepend_file 'spec/spec_helper.rb', simplecov_init
 
       rspec_expect_syntax = <<-RUBY
 
@@ -293,8 +292,5 @@ module RailsloveSuspenders
       IO.read find_in_source_paths('factories_spec_rake_task.rb')
     end
 
-    def simplecov_init
-      IO.read find_in_source_paths('simplecov_init.rb')
-    end
   end
 end
