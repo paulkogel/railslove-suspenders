@@ -1,5 +1,5 @@
 # Railslove Suspenders
-<!-- [![Build Status](https://secure.travis-ci.org/thoughtbot/suspenders.png?branch=master)](http://travis-ci.org/thoughtbot/suspenders) -->
+[![Build Status](https://travis-ci.org/railslove/railslove-suspenders.png?branch=master)](https://travis-ci.org/railslove/railslove-suspenders)
 
 Suspenders is the base Rails application used at [railslove](http://railslove.com) originally developed at [thoughtbot](http://thoughtbot.com/community).
 
