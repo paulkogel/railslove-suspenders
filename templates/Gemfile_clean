@@ -1,20 +1,16 @@
 source 'https://rubygems.org'
 
 gem 'airbrake'
-gem 'compass'
+gem 'coffee-rails'
+gem 'compass-rails'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '>= 4.0.0'
 gem 'quiet_assets'
+gem 'sass-rails'
 gem 'newrelic_rpm'
 gem 'haml-rails'
-
-group :assets do
-  gem 'coffee-rails'
-  gem 'compass-rails'
-  gem 'sass-rails'
-  gem 'uglifier'
-end
+gem 'uglifier'
 
 group :development do
   gem 'better_errors'
