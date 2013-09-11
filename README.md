@@ -70,7 +70,10 @@ This has the same effect as running:
 Github
 ------
 
-You can optionally create a Github repository:
+You can optionally create a Github repository for the suspended Rails app. It
+requires that you have [Hub](https://github.com/github/hub) on your system:
+ 
+    curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
 
     suspenders app --github organization/project
 
