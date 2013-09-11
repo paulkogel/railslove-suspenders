@@ -7,6 +7,6 @@
     = stylesheet_link_tag :application, :media => 'all'
     = csrf_meta_tags
   %body{class: controller_name, id: "#{controller_name}_#{action_name}"}
-    = render 'flashes'
+    = render 'layouts/flashes'
     = yield
-    = render 'javascript'
+    = render 'layouts/javascript'
