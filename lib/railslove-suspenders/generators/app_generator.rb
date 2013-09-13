@@ -78,6 +78,7 @@ module RailsloveSuspenders
       # build :configure_background_jobs_for_rspec
       build :enable_database_cleaner
       build :configure_capybara_webkit
+      build :enable_strong_parameter_matcher
       # build :setup_guard_spork
     end
 

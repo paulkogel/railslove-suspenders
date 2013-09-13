@@ -127,6 +127,10 @@ module RailsloveSuspenders
       copy_file 'database_cleaner_rspec.rb', 'spec/support/database_cleaner.rb'
     end
 
+    def enable_strong_parameter_matcher
+      copy_file 'strong_parameter_matcher.rb', 'spec/support/matchers/strong_parameter_matcher.rb'
+    end
+
     def configure_rspec
       remove_file '.rspec'
       copy_file 'rspec', '.rspec'
