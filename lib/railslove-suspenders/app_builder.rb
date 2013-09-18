@@ -35,7 +35,7 @@ module RailsloveSuspenders
 
     def test_factories_first
       copy_file 'factories_spec.rb', 'spec/models/factories_spec.rb'
-      append_file 'Rakefile', factories_spec_rake_task
+      # append_file 'Rakefile', factories_spec_rake_task
     end
 
     def configure_smtp
